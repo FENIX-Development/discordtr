@@ -2,17 +2,16 @@ from distutils.core import setup
 setup(
   name = 'discordtr',         
   packages = ['discordtr'],  
-  version = '0.1',      
+  version = '0.2',      
   license='MIT',       
   description = 'developed by fenix-development',  
   author = 'berke',                  
   author_email = 'jaimitr14@gmail.com',     
   url = 'https://github.com/FENIX-Development/discordtr',  
-  download_url = 'https://github.com/FENIX-Development/discordtr/archive/v_01.tar.gz',   
+  download_url = 'https://github.com/FENIX-Development/discordtr/archive/v_02.tar.gz',   
   keywords = ['discordtr', 'fenixdev', 'discord-tr'],  
   install_requires=[           
-          'discordtr',
-          'komutlar',
+          'discordtr'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
