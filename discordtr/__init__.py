@@ -1,1 +1,1 @@
-from discordtr.komutlar import komutlar
+from discordtr import komutlar
