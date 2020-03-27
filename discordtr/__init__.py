@@ -5,7 +5,7 @@ __copyright__ = 'Copyright 2019-2020 JaimiTR'
 __version__ = '0.9'
 
 from collections import namedtuple
-from .komutlar import Bilgi, Emoji, Bot
+from .komutlar import Bilgi, Emoji, Bot, Embed, JSON
 import logging
 
 VersionInfo = namedtuple('VersionInfo', 'major minor micro releaselevel serial')
