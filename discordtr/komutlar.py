@@ -1,5 +1,5 @@
 import discord
-
+import json
 def bul(guild, ID: int):
   if ID is None:
     raise TypeError('bir ID verisi girilmeli')
@@ -50,6 +50,74 @@ class Emoji:
       raise KeyError('Hata: Emoji belirlenemedi')
     else:
       return f'{"".join([str(y) for y in x])}'
+
+class Embed:
+
+
+  def __init__(self, client):
+    self.client = client
+
+  def embed():
+    return discord.Embed()
+  def aciklama_embed(self, aciklama):
+    return discord.Embed(description=aciklama)
+  def baslik_embed(self, baslik):
+    return discord.Embed(title=baslik)
+  def renk_embed(self, renk):
+    return discord.Embed(color=renk)
+  def aciklama_baslik_embed(self, aciklama, baslik):
+    return discord.Embed(title=baslik, description=aciklama)
+  def aciklama_renk_embed(self, aciklama, renk):
+    return discord.Embed(description=aciklama, color=renk)
+  def aciklama_baslik_renk_embed(self, aciklama, baslik, renk):
+    return discord.Embed(title=baslik, description=aciklama, color=renk)
+  def sahip(embed, sahip: str):
+    return embed.set_author(name=sahip)
+  def teklisatirekle(embed, satir):
+    return embed.add_field(name='** **', value=satir)
+  def ters_teksatirekle(embed, satir):
+    return embed.add_field(name=satir, value='** **')
+  def satirekle(embed, satir, deger):
+    return embed.add_field(name=satir, value=deger)
+  def footer(embed, footer):
+    return embed.set_footer(text=footer)
+  def pp_footer(embed, footer, resimurl):
+    return embed.set_footer(text=footer, icon_url=resimurl)
+  def thumbnail(embed, url):
+    return embed.set_thumbnail(url=url)
+  def pp(embed, url):
+    return embed.set_image(url=url)
+
+class JSON:
+
+  def __init__(self, client):
+    self.client = client
+
+  def oku(dosyaAdı):
+    with open(f"{dosyaAdı}.json", 'r') as f:
+      return json.load(f)
+
+  def yaz(dosyaAdı, degisken, veri):
+    with open(f"{dosyaAdı}.json", 'r') as f:
+      x = json.load(f)
+      x[str(degisken)] = veri
+    with open(f"{dosyaAdı}.json", 'w') as f:
+      return json.dump(x, f, indent=4)
+
+  def sil(dosyaAdı):
+    with open(f"{dosyaAdı}.json", 'r') as f:
+      x = json.load(f)
+      x = {}
+    with open(f"{dosyaAdı}.json", 'w') as f:
+      return json.dump(x, f, indent=4)
+
+  def verisil(dosyaAdı, degisken):
+    with open(f"{dosyaAdı}.json", 'r') as f:
+      x = json.load(f)
+      x[str(degisken)] = {}
+    with open(f"{dosyaAdı}.json", 'w') as f:
+      return json.dump(x, f, indent=4)
+
 
 class Bilgi:
 
