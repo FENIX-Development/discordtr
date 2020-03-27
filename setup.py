@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'discordtr',         
   packages = ['discordtr'],  
-  version = '0.9',      
+  version = '0.9.1',      
   license='MIT',       
   description = 'developed by fenix-development',  
   author = 'JaimiTR',                  
   author_email = 'jaimitr14@gmail.com',     
   url = 'https://github.com/FENIX-Development/discordtr',  
-  download_url = 'https://github.com/FENIX-Development/discordtr/archive/v_09.tar.gz',   
+  download_url = 'https://github.com/FENIX-Development/discordtr/archive/v_09_1.tar.gz',   
   keywords = ['discordtr', 'fenixdev', 'discord-tr'],  
   install_requires=[           
           'discordtr',
